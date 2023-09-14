@@ -2,6 +2,10 @@ clear
 clc
 tic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% author: Mayank Gupta and B. R. K. Nanda
+% Date: 14/09/2023
+% Ref: Phys. Rev. B 102 (3), 035116, (2020) and Phys. Rev. B 101 (15), 155102, (2020).
+% contact: nandab@iitm.ac.in and mayank77338@gmail.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% lattice parameter
 a = 1; ... Lattice constant
