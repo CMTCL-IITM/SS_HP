@@ -24,7 +24,7 @@ b3 =  2*pi*cross(rvec(1,:),rvec(2,:))/Vol;
 recip = [b1;b2;b3];
 %% design of kpath
 kpath =[];
-
+% no. of kpoints
 n = 100;
 for j = 1:n
     kpath = [kpath;j*0.5/n,-j*0.5/n,0];
@@ -77,7 +77,7 @@ for i = 1:size(kpts,1)-1
     d = sqrt(sum((kpts(i,:)-kpts(i+1,:)).^2));
     s(i+1) = s(i) + d;
 end
-%% plotting od surface states
+%% plotting of surface states
 
 plot(s,eigE,'Color', 'b','LineWidth',0.5);
 
