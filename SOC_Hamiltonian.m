@@ -1,19 +1,18 @@
 function [HSO,HR,HR_z] = SOC_Hamiltonian(int,k,a)
-
+%% Strength of ISB field
 Gsp_x	=   int(7);
 Gsp_y	=   int(8);
 Gsp_z	=   int(9);
 Gpp_x	=   int(10);
 Gpp_y	=   int(11);
 Gpp_z	=   int(12);
-spin    =   int(13);
+spin    =   int(13); ... atomistic SOC strength
 
 %% kpoints
 
 kx = k(1);ky = k(2);
 
-%%
-
+%% H (inversion symmetry breaking)
 
 H1 = [0, 2*Gsp_x*(cos(ky*a)), 2*Gsp_y*(cos(kx*a)),  2*Gsp_z*(cos(kx*a)+cos(ky*a));
     
@@ -26,7 +25,7 @@ H1 = [0, 2*Gsp_x*(cos(ky*a)), 2*Gsp_y*(cos(kx*a)),  2*Gsp_z*(cos(kx*a)+cos(ky*a)
 HR = [H1,zeros(4);
     zeros(4),H1];
 
-%% H atomistic
+%% H atomistic SOC (\lambda \vec{L} \cdot \vec{S})
 
 HSO = [0, 0, 0, 0,       0,  0,0,0;...
     0, 0,-1j*spin,0,  0,  0,0,spin;...
